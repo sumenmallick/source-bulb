@@ -35,7 +35,7 @@ const financeCalculators: { name: string; desc: string; link: string }[] = [
     link: parentDir+"/fd-calculator",
   },
 ];
-export default function finance() {
+export default function Finance() {
   return (
     <div className="flex flex-wrap">
       {financeCalculators.map((item, i) => (
