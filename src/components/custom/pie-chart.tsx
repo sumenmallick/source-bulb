@@ -33,9 +33,10 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function PieChartComponent(props: []) {
+export function PieChartComponent(props: any) {
   console.log(111, props);
-  const totalValue = props.propData.reduce((acc, curr) => acc + curr.count, 0);
+  const propData: [{label:string,count:number, fill:string}] = props.propData;
+  const totalValue = propData.reduce((acc, curr) => acc + curr.count, 0);
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">

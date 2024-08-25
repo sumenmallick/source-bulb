@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import React from "react";
 
-export default function fdCalculator() {
+export default function FdCalculator() {
   const [totalInvestment, setTotalInvestment] = React.useState(500000);
   const [roi, setRoi] = React.useState(6);
   const [timePeriod, setTimePeriod] = React.useState(2);
