@@ -50,7 +50,7 @@ export default function FdCalculator() {
                       <Input className="basis-1/2" value={roi} onChange={(w)=>setRoi(Number(w.target.value))}/>
                     </div>
                     <div className="mb-4">
-                      <Slider defaultValue={[roi]} value={[roi]} max={10} step={1} onValueChange={(i) => setRoi(i[0])}/>
+                      <Slider defaultValue={[roi]} value={[roi]} max={10} step={0.1} onValueChange={(i) => setRoi(i[0])}/>
                     </div>
                   </div>
                 </div>
@@ -77,13 +77,13 @@ export default function FdCalculator() {
               </div>
             </div>
             <div className="grow">
-              <PieChartComponent propData={[{label:'totalInvestment', count:totalInvestment, fill: "red"},{label:'gainedInterest', count:gainedInterest, fill: "green"}]}/>
+              <PieChartComponent propData={[{label:'Total Investment', count:totalInvestment, fill: "red"},{label:'Gained Interest', count:gainedInterest, fill: "green"}]}/>
             </div>
           </div>
         </CardContent>
-        <CardFooter>
+        {/* <CardFooter>
           <p>Card Footer</p>
-        </CardFooter>
+        </CardFooter> */}
       </Card>
     </main>
   );

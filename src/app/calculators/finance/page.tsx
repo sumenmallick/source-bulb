@@ -37,9 +37,9 @@ const financeCalculators: { name: string; desc: string; link: string }[] = [
 ];
 export default function Finance() {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-items-center">
       {financeCalculators.map((item, i) => (
-        <Card key={i} className="p-2 m-2">
+        <Card key={i} className="p-auto m-2 grow">
             <Link href={item.link}>
           <CardHeader>
             <CardTitle>{item.name}</CardTitle>
